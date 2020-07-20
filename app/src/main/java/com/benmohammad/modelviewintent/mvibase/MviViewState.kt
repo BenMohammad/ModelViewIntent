@@ -1,4 +1,3 @@
 package com.benmohammad.modelviewintent.mvibase
 
-interface MviViewState {
-}
+interface MviViewState

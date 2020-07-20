@@ -3,7 +3,7 @@ package com.benmohammad.modelviewintent.data.tasks
 import com.benmohammad.modelviewintent.data.Task
 import com.benmohammad.modelviewintent.mvibase.MviIntent
 
-open class TasksIntent: MviIntent {
+sealed class TasksIntent: MviIntent {
     object InitialIntent: TasksIntent()
 
     data class RefreshIntent(val forceUpdate: Boolean): TasksIntent()

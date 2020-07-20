@@ -3,12 +3,12 @@ package com.benmohammad.modelviewintent.data.tasks
 import com.benmohammad.modelviewintent.data.Task
 import com.benmohammad.modelviewintent.mvibase.MviResult
 
-open class TasksResult: MviResult {
+sealed class TasksResult: MviResult {
 
     sealed class LoadTaskResult: TasksResult() {
         data class Success(val tasks: List<Task>, val filterType: TasksFilterType?): LoadTaskResult()
         data class Failure(val error: Throwable): LoadTaskResult()
-        object InFlight: TasksResult()
+        object InFlight: LoadTaskResult()
     }
 
     sealed class ActivateTaskResult: TasksResult() {
