@@ -18,10 +18,10 @@ class TasksAdapter(tasks: List<Task>): BaseAdapter()  {
     private lateinit var tasks: List<Task>
 
     val taskClickObservable: Observable<Task>
-    get() = taskClickObservable
+    get() = taskCLickSubject
 
     val taskToggleObservable: Observable<Task>
-    get() = taskToggleObservable
+    get() = taskToggleSubject
 
     init {
         setList(tasks)
