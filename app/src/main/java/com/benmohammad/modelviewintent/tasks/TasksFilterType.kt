@@ -1,4 +1,4 @@
-package com.benmohammad.modelviewintent.data.tasks
+package com.benmohammad.modelviewintent.tasks
 
 enum class TasksFilterType {
 

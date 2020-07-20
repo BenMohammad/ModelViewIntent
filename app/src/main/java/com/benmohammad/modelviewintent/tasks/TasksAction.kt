@@ -1,4 +1,4 @@
-package com.benmohammad.modelviewintent.data.tasks
+package com.benmohammad.modelviewintent.tasks
 
 import com.benmohammad.modelviewintent.data.Task
 import com.benmohammad.modelviewintent.mvibase.MviAction

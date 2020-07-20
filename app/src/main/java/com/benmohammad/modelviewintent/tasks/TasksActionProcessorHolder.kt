@@ -1,8 +1,8 @@
-package com.benmohammad.modelviewintent.data.tasks
+package com.benmohammad.modelviewintent.tasks
 
 import com.benmohammad.modelviewintent.data.source.TasksRepository
-import com.benmohammad.modelviewintent.data.tasks.TasksAction.*
-import com.benmohammad.modelviewintent.data.tasks.TasksResult.*
+import com.benmohammad.modelviewintent.tasks.TasksAction.*
+import com.benmohammad.modelviewintent.tasks.TasksResult.*
 import com.benmohammad.modelviewintent.util.pairWithDelay
 import com.benmohammad.modelviewintent.util.schedulers.BaseSchedulerProvider
 import io.reactivex.Observable

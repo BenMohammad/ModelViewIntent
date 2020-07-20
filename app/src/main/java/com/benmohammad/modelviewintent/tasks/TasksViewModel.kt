@@ -1,9 +1,9 @@
-package com.benmohammad.modelviewintent.data.tasks
+package com.benmohammad.modelviewintent.tasks
 
 import androidx.lifecycle.ViewModel
 import com.benmohammad.modelviewintent.data.Task
-import com.benmohammad.modelviewintent.data.tasks.TasksResult.*
-import com.benmohammad.modelviewintent.data.tasks.TasksResult.CompleteTaskResult.*
+import com.benmohammad.modelviewintent.tasks.TasksResult.*
+import com.benmohammad.modelviewintent.tasks.TasksResult.CompleteTaskResult.*
 import com.benmohammad.modelviewintent.mvibase.MviViewModel
 import com.benmohammad.modelviewintent.util.notOfTYpe
 import io.reactivex.Observable

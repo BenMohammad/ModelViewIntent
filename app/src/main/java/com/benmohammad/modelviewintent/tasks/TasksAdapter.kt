@@ -1,4 +1,4 @@
-package com.benmohammad.modelviewintent.data.tasks
+package com.benmohammad.modelviewintent.tasks
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,6 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.CheckBox
 import android.widget.TextView
-import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
 import com.benmohammad.modelviewintent.R
 import com.benmohammad.modelviewintent.data.Task
 import io.reactivex.Observable

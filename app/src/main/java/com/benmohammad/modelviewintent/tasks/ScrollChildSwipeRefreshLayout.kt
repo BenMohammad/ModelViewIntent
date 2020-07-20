@@ -1,4 +1,4 @@
-package com.benmohammad.modelviewintent.data.tasks
+package com.benmohammad.modelviewintent.tasks
 
 import android.content.Context
 import android.util.AttributeSet
