@@ -6,5 +6,7 @@ class AddEditTaskFragment: Fragment() {
 
     companion object {
         const val ARGUMENT_EDIT_TASK_ID = "EDIT_TASK_ID"
+
+        operator fun invoke(): AddEditTaskFragment = AddEditTaskFragment()
     }
 }

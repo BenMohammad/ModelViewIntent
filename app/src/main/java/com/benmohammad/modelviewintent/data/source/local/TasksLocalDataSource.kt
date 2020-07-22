@@ -64,8 +64,8 @@ class TasksLocalDataSource private constructor(
             TaskEntry.COLUMN_NAME_ENTRY_ID, TaskEntry.COLUMN_NAME_TITLE,
             TaskEntry.COLUMN_NAME_DESCRIPTION, TaskEntry.COLUMN_NAME_COMPLETED)
 
-        val sql = String.format("SELECT %s FROM %S WHERE %S LIKE ?",
-        TextUtils.join(",", projection), TaskEntry.TABLE_NAME, projection, taskId)
+        val sql = String.format("SELECT %s FROM %s WHERE %s LIKE ?",
+        TextUtils.join(",", projection), TaskEntry.TABLE_NAME, TaskEntry.COLUMN_NAME_ENTRY_ID)
 
         return databaseHelper
             .createQuery(TaskEntry.TABLE_NAME, sql, taskId)

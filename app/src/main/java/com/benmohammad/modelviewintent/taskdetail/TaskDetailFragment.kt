@@ -66,6 +66,11 @@ class TaskDetailFragment: Fragment(), MviView<TaskDetailIntent, TaskDetailViewSt
             .subscribe{showEditTask(argumentTaskID!!)}
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        disposables.dispose()
+    }
+
 
     override fun intents(): Observable<TaskDetailIntent> {
         return Observable.merge(initialIntent(), checkBoxIntent(), deleteIntent())
@@ -160,7 +165,7 @@ class TaskDetailFragment: Fragment(), MviView<TaskDetailIntent, TaskDetailViewSt
 
     private fun showTitle(title: String) {
         detailTitle.visibility = View.VISIBLE
-        detailTitle.text= title
+        detailTitle.text = title
     }
 
     private fun showDescription(description: String) {
@@ -181,7 +186,12 @@ class TaskDetailFragment: Fragment(), MviView<TaskDetailIntent, TaskDetailViewSt
     private fun showTaskMarkedActive() {
         Snackbar.make(requireView()!!, getString(R.string.task_marked_active), Snackbar.LENGTH_SHORT).show()
 
-    }    companion object {
+    }
+
+
+
+    companion object {
+
         private const val ARGUMENT_TASK_ID = "TASK_ID"
         private const val REQUEST_EDIT_TASK = 1
 
