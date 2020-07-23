@@ -38,6 +38,7 @@ class StatisticsFragment: Fragment(), MviView<StatisticsIntent, StatisticsViewSt
 
     private fun bind() {
         disposables.add(viewmodel.states().subscribe(this::render))
+        viewmodel.processIntents(intents())
     }
 
     override fun onDestroy() {
@@ -55,7 +56,7 @@ class StatisticsFragment: Fragment(), MviView<StatisticsIntent, StatisticsViewSt
 
     override fun render(state: StatisticsViewState) {
         if(state.isLoading) statisticsTV.text = getString(R.string.loading)
-        if(state.error == null) {
+        if(state.error != null) {
             statisticsTV.text = resources.getString(R.string.statistics_error)
         }
 

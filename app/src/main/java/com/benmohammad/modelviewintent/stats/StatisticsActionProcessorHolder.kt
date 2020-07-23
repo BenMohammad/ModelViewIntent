@@ -23,7 +23,7 @@ class StatisticsActionProcessorHolder(
                 tasksRepository.getTasks()
                     .flatMapIterable()
                     .publish<LoadStatisticsResult.Success> { shared ->
-                        Single.zip<Int, Int, LoadStatisticsResult.Success >(
+                        Single.zip<Int, Int, LoadStatisticsResult.Success>(
                             shared.filter(Task::active).count().map(Long::toInt),
                             shared.filter(Task::completed).count().map(Long::toInt),
                             BiFunction{activeCount, completedCount ->
