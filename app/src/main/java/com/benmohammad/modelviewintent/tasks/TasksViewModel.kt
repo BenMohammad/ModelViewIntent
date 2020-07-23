@@ -5,7 +5,7 @@ import com.benmohammad.modelviewintent.data.Task
 import com.benmohammad.modelviewintent.tasks.TasksResult.*
 import com.benmohammad.modelviewintent.tasks.TasksResult.CompleteTaskResult.*
 import com.benmohammad.modelviewintent.mvibase.MviViewModel
-import com.benmohammad.modelviewintent.util.notOfTYpe
+import com.benmohammad.modelviewintent.util.notOfType
 import io.reactivex.Observable
 import io.reactivex.ObservableTransformer
 import io.reactivex.disposables.CompositeDisposable
@@ -26,7 +26,7 @@ class TasksViewModel(
         intents.publish {shared ->
             Observable.merge(
                 shared.ofType(TasksIntent.InitialIntent::class.java).take(1),
-                shared.notOfTYpe(TasksIntent.InitialIntent::class.java)
+                shared.notOfType(TasksIntent.InitialIntent::class.java)
             )
         }
     }

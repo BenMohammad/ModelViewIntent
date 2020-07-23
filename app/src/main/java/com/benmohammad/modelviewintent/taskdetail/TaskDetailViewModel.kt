@@ -3,7 +3,7 @@ package com.benmohammad.modelviewintent.taskdetail
 import androidx.lifecycle.ViewModel
 import com.benmohammad.modelviewintent.mvibase.MviViewModel
 import com.benmohammad.modelviewintent.taskdetail.TaskDetailResult.*
-import com.benmohammad.modelviewintent.util.notOfTYpe
+import com.benmohammad.modelviewintent.util.notOfType
 import io.reactivex.Observable
 import io.reactivex.ObservableTransformer
 import io.reactivex.disposables.CompositeDisposable
@@ -23,7 +23,7 @@ class TaskDetailViewModel(
         intents.publish{shared ->
             Observable.merge<TaskDetailIntent> (
                 shared.ofType(TaskDetailIntent.InitialIntent::class.java).take(1),
-                shared.notOfTYpe(TaskDetailIntent.InitialIntent::class.java)
+                shared.notOfType(TaskDetailIntent.InitialIntent::class.java)
             )
         }
     }
